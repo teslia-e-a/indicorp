@@ -1,0 +1,136 @@
+.get-in-touch {
+	background: #f3f3f3;
+	width: 100%;
+	height: 100vh;
+	padding: 80px;
+
+	&__card-conteiner {
+		margin: 80px 0;
+		display: grid;
+		grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+		justify-content: center;
+		justify-items: center;
+		min-height: 393px;
+		align-items: center;
+		padding: 0 20px;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 336px;
+		height: 85%;
+		background: #ffffff;
+		padding: 50px 40px;
+		margin: 0;
+		z-index: 1;
+		transition: 0.2s cubic-bezier(0.06, 0.77, 0.84, 0.64);
+		&:hover {
+			box-shadow: 0 0 10px #e6e6e6;
+		}
+		&:nth-child(2) {
+			height: 100%;
+			background: #252b42;
+			z-index: 2;
+			&:hover {
+				box-shadow: 0 0 10px #252b42;
+			}
+			.get-in-touch__svg {
+				fill: #fff;
+			}
+			.get-in-touch__email {
+				color: #fff;
+			}
+			.get-in-touch__support {
+				color: #fff;
+			}
+			.get-in-touch__button {
+				border: 1px solid #fff;
+				color: #fff;
+				&:hover {
+					box-shadow: 0 0 10px #e6e6e6;
+				}
+			}
+		}
+	}
+
+	&__svg {
+		fill: #00a0c1;
+		width: 72px;
+		height: 72px;
+		overflow: visible;
+		margin: 0 0 15px 0;
+	}
+
+	&__email {
+		font-weight: 600;
+		font-size: 14px;
+		text-align: center;
+		letter-spacing: 0.2px;
+		color: #252b42;
+		margin: 0;
+	}
+
+	&__support {
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.1px;
+		color: #252b42;
+		margin: 20px 0px 5px 0px;
+	}
+
+	&__button {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 10px 20px;
+		width: 160px;
+		height: 44px;
+		border: 1px solid #ffa62b;
+		box-sizing: border-box;
+		border-radius: 5px;
+		margin: 5px 0px;
+		//* text
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.2px;
+		color: #ffa62b;
+		transition: 0.2s cubic-bezier(0.06, 0.77, 0.84, 0.64);
+		&:hover {
+			box-shadow: 0 0 10px #ffa62b;
+		}
+	}
+}
+@media (max-width: 1130px) {
+	.get-in-touch {
+		height: auto;
+		&__card-conteiner {
+			grid-template: repeat(3, 1fr) / repeat(1, 1fr);
+		}
+		&__card {
+			margin: 30px;
+		}
+	}
+}
+@media (max-width: 700px) {
+	.get-in-touch {
+		padding: 80px 0px;
+		&__card-conteiner {
+			margin: 80px 0 0px;
+		}
+	}
+}
+@media (max-width: 550px) {
+	.get-in-touch {
+		&__card {
+			width: 280px;
+			padding: 30px 10px;
+		}
+	}
+}

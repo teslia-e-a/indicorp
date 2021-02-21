@@ -1,0 +1,32 @@
+@import "nullstyle.scss";
+@import "header.scss";
+@import "why.scss";
+@import "practice.scss";
+@import "best-business.scss";
+@import "clients.scss";
+@import "get-in-touch.scss";
+@import "consulting-agency.scss";
+@import "additional-information.scss";
+@import "bottom.scss";
+
+.wrapper {
+	width: 100%;
+}
+.bounding-container {
+	padding: 0 40px;
+	max-width: 1130px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	z-index: 3;
+	margin: 0 auto;
+	justify-content: space-between;
+	&_best-business {
+		justify-content: space-around;
+	}
+}
+@media (max-width: 400px) {
+	.bounding-container {
+		padding: 0 10px;
+	}
+}
